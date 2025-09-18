@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+__pycache__/
+*.pyc
+__pycache__/
+*.pyc
