@@ -15,11 +15,17 @@ class EnderecoAdmin(admin.ModelAdmin):
 class EmpresaAdmin(admin.ModelAdmin):
     list_display = ('cnpj', 'address', 'legal_name', 'trade_name', 'url_image')
     search_fields = ('cnpj', 'legal_name', 'trade_name')
-
+    
 @admin.register(BusinessHours)
-class HorarioFuncionamentoAdmin(admin.ModelAdmin):
-    list_display = ('company', 'day_of_week', 'opening_time', 'closing_time')
-    search_fields = ('company__trade_name', 'day_of_week')
+class BusinessHoursAdmin(admin.ModelAdmin):
+    autocomplete_fields = []  # garante que não habilite auto complete
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        formfield = super().formfield_for_foreignkey(db_field, request, **kwargs)
+        if formfield:
+            formfield.widget.can_add_related = False
+            formfield.widget.can_change_related = False
+            formfield.widget.can_view_related = False
+        return formfield
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
