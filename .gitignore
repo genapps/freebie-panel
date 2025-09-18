@@ -1,0 +1,3 @@
+git checkout -- src/core/__pycache__/settings.cpython-313.pyc
+git checkout -- src/managament/__pycache__/admin.cpython-313.pyc
+git checkout -- src/managament/__pycache__/models.cpython-313.pyc
