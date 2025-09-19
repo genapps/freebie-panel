@@ -125,7 +125,7 @@ class Item(models.Model):
     )
 
     
-    redemption_point =  models.ManyToManyField('RedemptionPoint')
+    redemption_point =  models.ManyToManyField('RedemptionPoint', related_name="items")
     item_quantity = models.IntegerField()
     max_pickup = models.IntegerField()
     url_image = models.URLField(max_length=255, blank=True, null=True)

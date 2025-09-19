@@ -6,11 +6,10 @@ import sys
 
 def main():
     """Run administrative tasks."""
-<<<<<<< HEAD
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'freebiepanel.settings')
-=======
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
->>>>>>> 8aad1a7 (atualizando projeto)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
