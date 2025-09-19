@@ -1,3 +1,2 @@
-
-# Acrescenta as regras comuns para Python
-printf "__pycache__/\n*.py[cod]\n*.pyo\n" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
